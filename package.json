@@ -1,5 +1,5 @@
 {
-    "name": "com.unity.postprocessing",
+    "name": "cc.sugi.postprocessing",
     "version": "2.4.0",
     "displayName": "Post Processing for AsymetricProjectionMatrix",
     "unity": "2018.3",
