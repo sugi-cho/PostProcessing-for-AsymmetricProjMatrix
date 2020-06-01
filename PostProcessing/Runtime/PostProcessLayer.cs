@@ -440,11 +440,11 @@ namespace UnityEngine.Rendering.PostProcessing
             // We also need to force reset the non-jittered projection matrix here as it's not done
             // when ResetProjectionMatrix() is called and will break transparent rendering if TAA
             // is switched off and the FOV or any other camera property changes.
-
+/*
 #if UNITY_2018_2_OR_NEWER
             if (!m_Camera.usePhysicalProperties)
 #endif
-                m_Camera.ResetProjectionMatrix();
+                m_Camera.ResetProjectionMatrix();*/
             m_Camera.nonJitteredProjectionMatrix = m_Camera.projectionMatrix;
 
 #if ENABLE_VR
@@ -669,13 +669,13 @@ namespace UnityEngine.Rendering.PostProcessing
 
             if (m_CurrentContext.IsTemporalAntialiasingActive())
             {
-#if UNITY_2018_2_OR_NEWER
+/*#if UNITY_2018_2_OR_NEWER
                 // TAA calls SetProjectionMatrix so if the camera projection mode was physical, it gets set to explicit. So we set it back to physical.
                 if (m_CurrentContext.physicalCamera)
                     m_Camera.usePhysicalProperties = true;
                 else
 #endif
-                    m_Camera.ResetProjectionMatrix();
+                    m_Camera.ResetProjectionMatrix();*/
 
                 if (m_CurrentContext.stereoActive)
                 {
